@@ -125,6 +125,36 @@
 			.bindTooltip(message)
 			.addTo(map)
 			.openTooltip();
+
+		//DECLARE AND ASSIGN TWO LOCATIONS FOR YOUR HOMETOWN MAP
+
+		//Yuma Territorial Prison
+		var name1 = "Yuma Territorial Prison",
+			latitude1 =32.7270,
+			longitude1 = -114.6150,
+			location1Details = "Catch the 3:10 to Yuma and see some Wild West justice on the Colorado River."
+		//build Yuma Territorial Prison popup
+		var location1Popup = "<b>" + name1 +"</b><b>" +
+		"<b>Details</b>: " + location1Details;
+
+		//Yuma Proving background
+		var name2 = "Yuma Proving Ground",
+			coords = [33.0178, -114.2525],
+			location2Details = "Welcome to YPG, the historic testing grounds for soliders and artillery since the Second World War."
+			//build YPG Popup
+			var location2Popup = "<b>" + name2 + "</b><b>" +
+						"<b>Details</b>:" + location2Details;
+
+		//ADD TWO LOCATIONS TO YOUR HOMETOWN MAP WITH POPUPS
+
+		L.marker([latidude1, longitude1])
+			.addTo(map)
+			.bindPopup(location1Popup);
+
+		L.marker(coords)
+			.addTo(map)
+			.bindPopup(location2Popup);
+
 	</script>
 
 </body>
